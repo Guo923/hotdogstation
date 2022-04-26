@@ -1,1 +1,333 @@
+/* =======================
+FONTS  
+========================= */
+
+
 @import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap');
+
+/* ===========================
+variables
+============================= */
+
+:root{
+--clr-primary:#f25202;
+--clr-primary-hover:#ea8417;
+--clr-grey-1:rgb(54, 56, 54);
+--clr-grey-5:rgb(128, 126, 126);
+--clr-grey-10:rgba(226, 228, 226, 0.906);
+--clr-white:#fff;
+--ff-primary:'Josefin Sans', sans-serif;
+--ff-secondary:"Grand Hotel", sans-serif;
+--transition: all 0.3s linear;
+--spacing:0.25rem;
+--radial:0.5rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--ff-primary);
+    background-color: var(--clr-white);
+    color: var(--clr-grey-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+h1,h2,h3,h4{
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    }
+
+    
+h3 {
+        font-size: 1.5rem;
+        }
+
+        
+h4 {
+            font-size: 0.875rem;
+            }
+            
+
+@media screen and (min-width: 800px) {
+
+body{
+    line-height: 1.5;
+    font-size: 0.875rem;
+}    
+    
+
+
+h1,h2,h3,h4{
+    
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+h1 {
+font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+    }
+
+    
+h3 {
+        font-size: 2rem;
+        }
+
+        
+h4 {
+            font-size: 1rem;
+            }
+            
+
+}
+
+
+/* MORE GLOBLE CSS */
+.btn{
+    background-color: var(--clr-primary);
+    padding:  0.75rem 1rem;
+    color: var(--clr-white);
+    border-radius: var(--radial);
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: 2px 2px 2px var(--clr-grey-5);
+    display: inline-block;
+   }
+
+   .btn:hover{
+       background-color: var(--clr-primary-hover);
+       transform: translateY(-5px);
+ 
+   }
+
+ 
+/* 
+==================
+header
+=================== 
+*/
+
+.header{
+    min-height: 100vh;
+    background:linear-gradient(rgba(71, 71, 71, 0.6), rgba(143, 140, 140, 0.2))
+   , url("../images/pexels-polina-tankilevitch-4518646.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position: fixed;
+    position: relative;
+
+    /* animation */
+    overflow-x: hidden;
+}
+
+.banner{
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+
+}
+
+.banner h3{
+    color: var(--clr-white);
+  
+    font-weight: 200;
+}
+/* animation */
+
+
+
+.banner h1{
+    color:var(--clr-white);
+}
+
+.banner span{
+    color: var(--clr-primary);
+}
+
+.banner-btn {
+    outline: 0.125px solid var(--clr-primary);
+outline-offset: 0.25rem;
+padding: 10px 40px;
+}
+
+
+/* content-divider */
+.content-divider{
+    height: 0.5rem;
+    background: linear-gradient(to left, var(--clr-primary), var(--clr-primary-hover), var(--clr-primary));
+
+}
+
+/* 
+=============
+specials
+============= */
+
+.specials{
+    background: var(--clr-grey-10);
+}
+
+.special{
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--transition);
+}
+
+
+.special-icon{
+    font-size: 2.4rem;
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+    display: inline-block;
+    color: var(--clr-primary);
+}
+
+.special-text{
+    color: var(--clr-grey-5);
+   max-width: 50vw;
+   margin: 0 auto;
+}
+
+.special:hover{
+    background-color: var(--clr-white);
+    box-shadow: 0 2px var(--clr-primary-hover) ;
+}
+
+
+.special:hover .special-icon{
+   color: var(--clr-primary-hover);
+    transform: translateY(-5px);
+   
+}
+
+@media screen and (min-width:578px){
+    .specialgroup{
+        display: flex;
+       width: 100%;
+       padding: 0 10vw;
+    }
+    .special-text{
+        
+        max-width: 40vw;
+       
+     }
+
+
+    }
+
+
+@media screen and (min-width:800px){
+    .specials{
+        display: flex;
+       width: 100%;
+       padding: 0 10vw;
+    }
+
+    .special-text{
+        
+       max-width: 20vw;
+      
+    }
+    
+    .specialgroup{
+        display:flex;
+       width: 100%;
+       padding: 0;
+    }
+}
+
+
+/* =================
+products
+=============== */
+
+.productsection{
+    padding: 5rem 0;
+    text-align: center;
+    transition: var(--transition);
+} 
+
+.producttitle h3{
+    font-weight: 200;
+}
+
+
+.productsname{
+    margin-top: 0px;
+    font-size: 1.5rem;
+}
+.pictureproduct{
+    margin-top: 5vh;
+    height: 350px;
+    width: 100%;
+    display: block;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  
+}
+.producttext{
+    padding: 0 15vw;}
+
+    .price{
+        text-transform: lowercase;
+        font-weight: 300;
+    }
+
+
+.button-prod{
+    margin-top: 1rem;
+}
+
+@media screen and (min-width:800px){
+    .products{
+        display: flex;
+    }
+
+    .prodimg{
+
+        
+        height: 300px;
+        width: 33.3vw;
+        
+        
+    }
+    .producttext{
+        padding: 0 5vw;}
+
+        .productintro{
+          
+        }
+}
